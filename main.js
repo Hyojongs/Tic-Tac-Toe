@@ -60,7 +60,7 @@ function gameOver(gameWon) {
 	for (var i = 0; i < cells.length; i++) {
 		cells[i].removeEventListener('click', turnClick, false);
 	}
-	declareWinner(gameWon.player == huPlayer ? "You win!" : "You lose.");
+	declareWinner(gameWon.player == huPlayer ? "승리!" : "비참한 패배.");
 }
 
 function declareWinner(who) {
@@ -82,7 +82,7 @@ function checkTie() {
 			cells[i].style.backgroundColor = "green";
 			cells[i].removeEventListener('click', turnClick, false);
 		}
-		declareWinner("Tie Game!")
+		declareWinner("무승부")
 		return true;
 	}
 	return false;
